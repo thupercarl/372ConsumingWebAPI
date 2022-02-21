@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-dark">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Favorite Quotes</title>
+</head>
+<body class="bg-light pr">
+<div class="container bg-success mt-6">
+    <div class="row">
+        <div class="col-sm" id="dailyQuoteContainer">
+            <h2 class="bg-dark text-light">See the Quote of the Day</h2>
+            <button type="button" id="dailyQuote" class="bg-gradient-primary">Quote of the Day</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm" id="filterQuote">
+            <h2 class="bg-dark text-light">Find a Quote by Author</h2>
+            <label>Author
+                <input type="text" id="author">
+            </label>
+            <button type="button" id="find" class="bg-gradient-primary">Find Quotes</button>
+            <div id="quoteResults"></div>
+        </div>
+    </div>
+
+    <div id="result" class="ml-5 mr-5"></div>
+
+</div>
+
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+</script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
+</script>
+<script src="scripts/quoteOfTheDay.js"></script>
+<script src="scripts/filterQuote.js"></script>
+</body>
+</html>
