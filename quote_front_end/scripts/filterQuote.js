@@ -15,17 +15,28 @@ function retrieveQuotes() {
         }
     })
     .then(response => {
-        /*
         if(!response.ok) {
             throw Error("ERROR");
         }
-         */
         return response.json();
     })
         .then(data => {
         console.log(data);
-        //document.querySelector('#result').innerHTML = "<h2 class='text-light' id='quoteFont'>"+data[0].quote.author+"</h2>";
-        //document.querySelector('#result').innerHTML += "<h6 class='text-light' id='quoteFont'>"+data[0].quote.body+"</h6>";
+        //check and add author name
+        if(data.quotes[0].body !== "No quotes found")
+        {
+            document.querySelector('#result').innerHTML = "<h2 class='text-light' id='quoteFont'>"+data.quotes[0].author+"</h2>";
+            Object.entries(data.quotes).forEach(entry => {
+                let key = entry[0];
+                let value = entry[1];
+                //console.log("HERE'S THE ENTRIES   |   "+key, value.body);
+                document.querySelector('#result').innerHTML += "<h6 class='text-light' id='quoteFont'>"+(parseInt(key) + 1)+" : "+value.body+"</h6>";
+            });
+        }
+        else
+        {
+            document.querySelector('#result').innerHTML = "<h2 class='text-light' id='quoteFont'>No quotes matching this author.</h2>";
+        }
     })
         .catch(error => {
         console.log(error + " | This is the catch loop");
