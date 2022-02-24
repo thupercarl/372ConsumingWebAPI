@@ -1,7 +1,16 @@
-#submitButton {
-    display: none;
+#quoteCard {
+    background-color: beige;
 }
 
 #quoteFont {
     font-style: italic;
 }
+
+#result {
+    display: block;
+    padding-bottom: 40%;
+}
+
+#submitButton {
+     display: none;
+ }

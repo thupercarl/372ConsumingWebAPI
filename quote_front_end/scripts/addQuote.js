@@ -1,28 +1,44 @@
+//Jake Donaldson
+//2-24-22
+//addQuote.js
+//This file is designed to interact with the user submission area
+
 let formToggle = document.getElementById("formButton");
 formToggle.onclick = generateForm;
 
+/**
+ * This function is designed to update the page and display a form
+ */
 function generateForm() {
     console.log("inside generateform");
     let target = document.querySelector('#result');
-    target.innerHTML = "<label class='text-light'><input type='text' id='authorSubmit' placeholder='Author'></label>";
-    target.innerHTML += "<br>";
-    target.innerHTML += "<label class='text-light'><textarea id='bodySubmit' placeholder='Quote'></textarea></label>";
-    target.innerHTML += "<br>";
+    target.innerHTML =
+        "<label class='text-light'><input type='text' id='authorSubmit' placeholder='Author'></label>";
+    target.innerHTML +=
+        "<br>";
+    target.innerHTML +=
+        "<label class='text-light'><textarea id='bodySubmit' placeholder='Quote'></textarea></label>";
+    target.innerHTML +=
+        "<br>";
     document.getElementById("submitButton").style.display="block";
 }
 
 let submit = document.getElementById("submitButton");
 submit.onclick = sendData;
 
+/**
+ * This function makes a POST request to the API and updates the page
+ * API key required
+ * User token required
+ */
 function sendData() {
-    console.log("Generated Submit Button Works");
     let author = document.getElementById("authorSubmit").value;
     let body = document.getElementById("bodySubmit").value;
-    console.log(author+" | "+body);
 
     if(!author.trim() || !body.trim())
     {
-        document.querySelector("#result").innerHTML = "<p class='bg-danger text-light'>There was a problem sending your request.</p>";
+        document.querySelector("#result").innerHTML =
+            "<p class='bg-danger text-light'>There was a problem sending your request.</p>";
     }
     else
     {
@@ -45,11 +61,11 @@ function sendData() {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                //document.querySelector("#result").innerHTML = "";
             })
             .catch((error) => {
                 console.log("Error:", error);
-                document.querySelector("#result").innerHTML = "<p class='bg-danger text-light'>There was a problem sending your request.</p>";
+                document.querySelector("#result").innerHTML =
+                    "<p class='bg-danger text-light'>There was a problem sending your request.</p>";
             })
 
         document.getElementById("submitButton").style.display="none";
