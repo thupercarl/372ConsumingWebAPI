@@ -22,9 +22,9 @@ function getQuote() {
         .then(data => {
             console.log(data);
             document.querySelector('#result').innerHTML =
-                "<h2 class='text-light'>"+data.quote.author+"</h2>";
+                "<h2 class='text-light'>"+data.quote.author+"</h2>"; //displays author
             document.querySelector('#result').innerHTML +=
-                "<div id='quoteCard'><p class='text-dark' id='quoteFont'>"+data.quote.body+"</p></div>";
+                "<div id='quoteCard'><p class='text-dark' id='quoteFont'>"+data.quote.body+"</p></div>"; //display quote
         })
         .catch(error => {
             console.log(error);

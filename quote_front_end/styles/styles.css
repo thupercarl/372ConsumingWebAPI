@@ -1,7 +1,15 @@
+/*
+Author: Jake Donaldson
+Version: 2/25/22
+This stylesheet is designed to work with favoritequotes.html
+ */
+
+/*Generated Through JavaScript*/
 #quoteCard {
     background-color: beige;
 }
 
+/*Generated Through JavaScript*/
 #quoteFont {
     font-style: italic;
 }
@@ -11,6 +19,7 @@
     padding-bottom: 40%;
 }
 
+/*Hidden Under Normal Circumstances*/
 #submitButton {
      display: none;
  }

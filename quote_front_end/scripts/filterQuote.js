@@ -36,9 +36,11 @@ function retrieveQuotes() {
         //check and add author name
         if(data.quotes[0].body !== "No quotes found")
         {
+            //display author
             document.querySelector('#result').innerHTML =
                 "<h2 class='text-light'>"+data.quotes[0].author+"</h2>";
 
+            //for each loop for displaying quotes
             Object.entries(data.quotes).forEach(entry => {
                 let key = entry[0];
                 let value = entry[1];
@@ -55,6 +57,6 @@ function retrieveQuotes() {
         }
     })
         .catch(error => {
-        console.log(error + " | This is the catch loop");
+        console.log(error);
     });
 }

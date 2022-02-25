@@ -1,3 +1,8 @@
+<!--
+Author: Jake Donaldson
+Version: 2/25/22
+This page is designed to display information from a JavaScript file which pulls from an API
+-->
 <!DOCTYPE html>
 <html lang="en" class="bg-dark">
 <head>
@@ -8,13 +13,17 @@
 </head>
 <body class="bg-light">
 
+<!--HEADER-->
 <div class="d-flex justify-content-center bg-dark pb-5">
     <header>
         <h1 class="text-light text-align-center">FavQs API Front-End</h1>
     </header>
 </div>
 
+<!--MAIN PAGE-->
 <div class="container bg-success pt-5">
+
+<!--COLUMN SECTION FOR FUNCTION BUTTONS-->
     <div class="row">
         <div class="col-sm" id="dailyQuoteContainer">
             <button type="button" id="dailyQuote" class="bg-gradient-primary">Quote of the Day</button>
@@ -30,15 +39,22 @@
         </div>
     </div>
 
+<!--DIVIDER-->
     <div class="d-flex justify-content-center bg-light">
         <p>&nbsp</p>
     </div>
+
+<!--HIDDEN SUBMIT AREA-->
     <div id="buttons">
         <button type="button" id="submitButton" class="bg-gradient-primary">Submit</button>
     </div>
+
+<!--RESULTS PANE-->
     <div id="result" class="ml-5 mr-5">&nbsp</div>
 </div>
+<!--END MAIN PAGE-->
 
+<!--FOOTER AND 'CONTACT'-->
 <div class="d-flex justify-content-center bg-dark pt-5">
     <footer>
         <p class="text-light text-align-center">Contact Us</p>
@@ -47,6 +63,7 @@
     </footer>
 </div>
 
+<!--CDN LINKS-->
 <script crossorigin="anonymous"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
@@ -59,6 +76,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous">
 </script>
+
+<!--JAVASCRIPT-->
 <script src="scripts/quoteOfTheDay.js"></script>
 <script src="scripts/filterQuote.js"></script>
 <script src="scripts/addQuote.js"></script>
