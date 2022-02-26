@@ -12,6 +12,7 @@ This stylesheet is designed to work with favoritequotes.html
 /*Generated Through JavaScript*/
 #quoteFont {
     font-style: italic;
+    font-family: "Times New Roman", serif;
 }
 
 #result {

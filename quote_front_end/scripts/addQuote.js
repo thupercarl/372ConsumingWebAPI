@@ -69,6 +69,8 @@ function sendData() {
             })
 
         document.getElementById("submitButton").style.display="none";
+        document.querySelector("#result").innerHTML =
+            "<p class='bg-success text-light'>Quote added successfully.</p>";
     }
 
 }
